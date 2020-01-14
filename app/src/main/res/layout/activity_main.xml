@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <Spinner
+            android:id="@+id/spinnerCity"
+            android:layout_width="128dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerSeason"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinnerSeason"
+            android:layout_width="128dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinnerCity"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textCity"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCity"
+            tools:text="City Example" />
+
+        <TextView
+            android:id="@+id/textSeason"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCity"
+            tools:text="14" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/format"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSeason" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textSeason">
+
+            <RadioButton
+                android:id="@+id/celsiusRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Celsius" />
+
+            <RadioButton
+                android:id="@+id/fahrenheitRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fahrenheit" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout >
